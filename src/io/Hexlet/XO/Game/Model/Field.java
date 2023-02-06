@@ -1,5 +1,9 @@
 package io.Hexlet.XO.Game.Model;
 
+import io.Hexlet.XO.Game.Model.Exceptions.InvalidPointException;
+import io.Hexlet.XO.Game.Model.Exceptions.PointAlreadyOccupaiedException;
+import io.Hexlet.XO.Game.Model.Exceptions.PointAlreadyOccupiedException;
+
 import java.awt.*;
 
 public class Field {
@@ -12,11 +16,21 @@ public class Field {
         return FIELD_SIZE;
     }
 
-    public Figure getFigure(final Point point) {
+    public Figure getFigure(final Point point) throws InvalidPointException {
+        if (!checkPoint(point)) {
+            throw new InvalidPointException();
+        }
         return field[point.x][point.y];
     }
 
-    public void setFigure(final Point point, final Figure figure) {
+    public void setFigure(final Point point, final Figure figure) throws InvalidPointException,
+                                                                            PointAlreadyOccupiedException {
+        if (!checkPoint(point)) {
+            throw new InvalidPointException();
+        }
+        if (field[point.x][point.y] != null) {
+            throw new PointAlreadyOccupiedException();
+        }
         field[point.x][point.y] = figure;
     }
 
