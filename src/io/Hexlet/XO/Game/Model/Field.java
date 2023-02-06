@@ -1,7 +1,6 @@
 package io.Hexlet.XO.Game.Model;
 
 import io.Hexlet.XO.Game.Model.Exceptions.InvalidPointException;
-import io.Hexlet.XO.Game.Model.Exceptions.PointAlreadyOccupaiedException;
 import io.Hexlet.XO.Game.Model.Exceptions.PointAlreadyOccupiedException;
 
 import java.awt.*;
