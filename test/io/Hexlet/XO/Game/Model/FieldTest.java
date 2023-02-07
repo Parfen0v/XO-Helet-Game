@@ -18,7 +18,7 @@ class FieldTest {
     }
 
     @Test
-    void setFigure() throws InvalidPointException, PointAlreadyOccupiedException {
+    void setFigure() throws InvalidPointException {
         final Field field = new Field();
         final Point inputPoint = new Point(0,0);
         final Figure inputFigure = Figure.X;
@@ -30,20 +30,7 @@ class FieldTest {
     }
 
     @Test
-    void testSetFigureWhenAlreadyAccupied() throws Exception {
-        final Field field = new Field();
-        final Point inputPoint = new Point(0,0);
-        final Figure inputFigure = Figure.X;
-
-        field.setFigure(inputPoint,inputFigure);
-        try {
-            field.setFigure(inputPoint,inputFigure);
-            fail();
-        } catch (final PointAlreadyOccupiedException e) {}
-    }
-
-    @Test
-    void testGetFigureWhenFigureIsNotSet() throws InvalidPointException, PointAlreadyOccupiedException {
+    void testGetFigureWhenFigureIsNotSet() throws InvalidPointException {
         final Field field = new Field();
         final Point inputPoint = new Point(0,0);
 
@@ -53,7 +40,7 @@ class FieldTest {
     }
 
     @Test
-    void testGetFigureWhenXIsLessThenZero() throws Exception {
+    void testGetFigureWhenXIsLessThenZero() {
         final Field field = new Field();
         final Point inputPoint = new Point(-1,0);
 
@@ -64,7 +51,7 @@ class FieldTest {
     }
 
     @Test
-    void testGetFigureWhenYIsLessThenZero() throws Exception {
+    void testGetFigureWhenYIsLessThenZero() {
         final Field field = new Field();
         final Point inputPoint = new Point(0,-1);
 
@@ -75,7 +62,7 @@ class FieldTest {
     }
 
     @Test
-    void testGetFigureWhenXIsMoreThenFieldSize() throws Exception {
+    void testGetFigureWhenXIsMoreThenFieldSize(){
         final Field field = new Field();
         final Point inputPoint = new Point(field.getSize() + 1 ,0);
 
