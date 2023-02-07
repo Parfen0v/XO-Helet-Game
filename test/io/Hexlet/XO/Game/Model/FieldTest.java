@@ -10,16 +10,18 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FieldTest {
 
+    public static int fieldSize = 3;
+
     @Test
     void getSize() {
-        final Field field = new Field();
+        final Field field = new Field(fieldSize);
 
         assertEquals(3, field.getSize());
     }
 
     @Test
     void setFigure() throws InvalidPointException {
-        final Field field = new Field();
+        final Field field = new Field(fieldSize);
         final Point inputPoint = new Point(0,0);
         final Figure inputFigure = Figure.X;
 
@@ -31,7 +33,7 @@ class FieldTest {
 
     @Test
     void testGetFigureWhenFigureIsNotSet() throws InvalidPointException {
-        final Field field = new Field();
+        final Field field = new Field(fieldSize);
         final Point inputPoint = new Point(0,0);
 
         final Figure actualFigure = field.getFigure(inputPoint);
@@ -41,7 +43,7 @@ class FieldTest {
 
     @Test
     void testGetFigureWhenXIsLessThenZero() {
-        final Field field = new Field();
+        final Field field = new Field(fieldSize);
         final Point inputPoint = new Point(-1,0);
 
         try {
@@ -52,7 +54,7 @@ class FieldTest {
 
     @Test
     void testGetFigureWhenYIsLessThenZero() {
-        final Field field = new Field();
+        final Field field = new Field(fieldSize);
         final Point inputPoint = new Point(0,-1);
 
         try {
@@ -63,7 +65,7 @@ class FieldTest {
 
     @Test
     void testGetFigureWhenXIsMoreThenFieldSize(){
-        final Field field = new Field();
+        final Field field = new Field(fieldSize);
         final Point inputPoint = new Point(field.getSize() + 1 ,0);
 
         try {
@@ -74,7 +76,7 @@ class FieldTest {
 
     @Test
     void testGetFigureWhenYIsMoreThenFieldSize() throws Exception {
-        final Field field = new Field();
+        final Field field = new Field(fieldSize);
         final Point inputPoint = new Point(0,field.getSize() + 1);
 
         try {

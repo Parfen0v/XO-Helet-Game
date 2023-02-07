@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class GameTest {
-
+    int fieldSize = FieldTest.fieldSize;
     @Test
     void getPlayers() {
         final Player[] inputValue = {new Player("Vasya",Figure.O), new Player("Petya", Figure.X)};
@@ -21,7 +21,7 @@ class GameTest {
     @Test
     void getField() {
 
-        final Field inputValue = new Field();
+        final Field inputValue = new Field(fieldSize);
         final Field expectedValue = inputValue;
 
         final Game game = new Game(null, expectedValue,null);
