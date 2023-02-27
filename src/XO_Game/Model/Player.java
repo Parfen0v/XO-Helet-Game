@@ -1,4 +1,4 @@
-package io.Hexlet.XO.Game.Model;
+package XO_Game.Model;
 
 public class Player {
     private final String name;

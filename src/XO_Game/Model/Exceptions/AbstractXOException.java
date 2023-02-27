@@ -1,4 +1,4 @@
-package io.Hexlet.XO.Game.Model.Exceptions;
+package XO_Game.Model.Exceptions;
 
 public abstract class AbstractXOException extends Exception{
 }

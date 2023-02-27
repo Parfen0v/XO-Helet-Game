@@ -1,9 +1,9 @@
-package Controller;
+package XO_Game.Controller;
 
-import io.Hexlet.XO.Game.Model.Exceptions.InvalidPointException;
-import io.Hexlet.XO.Game.Model.Exceptions.PointAlreadyOccupiedException;
-import io.Hexlet.XO.Game.Model.Field;
-import io.Hexlet.XO.Game.Model.Figure;
+import XO_Game.Model.Exceptions.InvalidPointException;
+import XO_Game.Model.Exceptions.PointAlreadyOccupiedException;
+import XO_Game.Model.Field;
+import XO_Game.Model.Figure;
 
 import java.awt.*;
 

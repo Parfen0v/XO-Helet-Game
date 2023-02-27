@@ -1,4 +1,4 @@
-package io.Hexlet.XO.Game.Model;
+package XO_Game.Model;
 
 public class Game {
     private final Player[] players;

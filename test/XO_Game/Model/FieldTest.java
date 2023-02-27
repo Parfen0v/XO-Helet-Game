@@ -1,7 +1,6 @@
-package io.Hexlet.XO.Game.Model;
+package XO_Game.Model;
 
-import io.Hexlet.XO.Game.Model.Exceptions.InvalidPointException;
-import io.Hexlet.XO.Game.Model.Exceptions.PointAlreadyOccupiedException;
+import XO_Game.Model.Exceptions.InvalidPointException;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;

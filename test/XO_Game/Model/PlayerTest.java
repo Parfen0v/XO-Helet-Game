@@ -1,8 +1,8 @@
-package io.Hexlet.XO.Game.Model;
+package XO_Game.Model;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PlayerTest {
 

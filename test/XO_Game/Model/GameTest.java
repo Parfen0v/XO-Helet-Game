@@ -1,21 +1,21 @@
-package io.Hexlet.XO.Game.Model;
+package XO_Game.Model;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GameTest {
     int fieldSize = FieldTest.fieldSize;
     @Test
     void getPlayers() {
-        final Player[] inputValue = {new Player("Vasya",Figure.O), new Player("Petya", Figure.X)};
+        final Player[] inputValue = {new Player("Vasya", Figure.O), new Player("Petya", Figure.X)};
         final Player[] expectedValue = inputValue;
 
         final Game game = new Game(inputValue, null,null);
 
-        final Player[] actualValye = game.getPlayers();
+        final Player[] actualValue = game.getPlayers();
 
-        assertEquals(expectedValue, actualValye);
+        assertEquals(expectedValue, actualValue);
     }
 
     @Test
